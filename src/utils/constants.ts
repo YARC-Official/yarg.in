@@ -1,0 +1,1 @@
+export const CONTRIBUTORS_SOURCE = "https://raw.githubusercontent.com/YARC-Official/Contributors/master/contributors.json";
