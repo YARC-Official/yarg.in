@@ -1,0 +1,19 @@
+.button {
+    font-weight: 500;
+    line-height: 1em;
+
+    padding: 15px 30px;
+    border-radius: var(--borderRadius);
+
+    background: white;
+    color: black;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button[data-color="blue"] {
+    background: var(--blue);
+}
