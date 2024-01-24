@@ -139,6 +139,14 @@
         text-align: left;
     }
 
+    .hero .about {
+        max-width: 650px;
+    }
+    
+    .hero .buttons {
+        padding: 0;
+    }
+
     .hero .title {
         align-items: flex-start;
     }
