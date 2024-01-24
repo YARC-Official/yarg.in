@@ -17,7 +17,10 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
+
+  /* TO-DO: change back to white after adding more content to home */
+  background: var(--headerBackground);
 }
 
 a {
