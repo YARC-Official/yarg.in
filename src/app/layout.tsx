@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { inter, redHatDisplay } from '@/app/fonts';
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
 
 const defaultTitle = "YARG | Yet Another Rhythm Game";
 const description = "YARG (a.k.a. Yet Another Rhythm Game) is a free, open-source, plastic guitar game that is still in development. It supports guitar (five fret), drums (plastic or e-kit), vocals, pro-guitar, and more!";
@@ -51,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={[inter.className, redHatDisplay.variable].join(" ")}>{children}</body>
     </html>
   )
 }
