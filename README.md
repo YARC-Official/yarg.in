@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <picture>
+    <img alt="Website Preview" src="./.github/images/header.png" width="100%">
+  </picture>
+</p>
 
-## Getting Started
+<p align="center">
+    <i>Front-end side of <a href="https://yarg.in">yarg.in</a></i>
+</p>
 
-First, run the development server:
+<p align="center">
+    <img src="https://github.com/Pantotone/yarg.in/actions/workflows/production.yml/badge.svg" alt="Production check" />
+    <img src="https://github.com/Pantotone/yarg.in/actions/workflows/preview.yml/badge.svg" alt="Production check" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is the main website for the YARG project, handling most static pages like news, features, setlist and contributors section. ~~For the leaderboard and community section, click here.~~ (soon)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔨 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Pre-requisites
+- [NodeJS](https://nodejs.org/)
 
-## Learn More
+### Starting the development server
 
-To learn more about Next.js, take a look at the following resources:
+1. Install dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```shell
+    npm i
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Run the development server
 
-## Deploy on Vercel
+    ```shell
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The local development page should be live on http://localhost:3000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## ✍️ Contributing
+
+If you want to contribute with the website, please feel free! 
+
+We recommend joining [our Discord](https://discord.gg/sqpu4R552r) and heading over to **#online-dev-chat** with your contribution idea before starting any work to make sure there's no conflifts with another contributors work.
+
+We have our website all mocked-up by our design team. If you need to add new sections added or make changes to the design, please check before with the design team on our Discord.
