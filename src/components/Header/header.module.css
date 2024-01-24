@@ -20,10 +20,14 @@
 }
 
 .header ul {
-    color: var(--headerAccent);
+    color: #fff;
     display: flex;
     gap: var(--_gap);
     margin-left: auto;
+}
+
+.header li {
+    list-style: none;
 }
 
 .header .user {

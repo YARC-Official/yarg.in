@@ -55,7 +55,11 @@
     color: var(--headerAccent);
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
+    gap: 1em;
+}
+
+.footer .navigation li {
+    list-style: none;
 }
 
 .footer .copyright {
@@ -63,6 +67,8 @@
     border-top: 1px solid #191F3C;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .footer .copyright .company,

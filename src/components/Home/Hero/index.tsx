@@ -4,6 +4,7 @@ import RotatingWords from '@/components/RotatingWords';
 import Header from '@/components/Header';
 import Button from "@/components/Button";
 import { Github } from "@/assets/Icons";
+import { Package } from "lucide-react";
 
 const HomeHero: React.FC = () => {
   return <div className={styles.hero}>
@@ -18,6 +19,7 @@ const HomeHero: React.FC = () => {
 
         <div className={styles.buttons}>
           <Button color="blue">
+            <Package />
             Download
           </Button>
 
