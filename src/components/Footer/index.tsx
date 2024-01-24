@@ -63,9 +63,9 @@ const Footer: React.FC = async () => {
     <div className={styles.copyright}>
         <div className={styles.company}>
             <div className={styles.link}>YARC</div>
-            <div className={styles.link}>Terms</div>
+            {/* <div className={styles.link}>Terms</div>
             <div className={styles.link}>Privacy</div>
-            <div className={styles.link}>Cookies</div>
+            <div className={styles.link}>Cookies</div> */}
         </div>
 
         <div className={styles.socials}>
