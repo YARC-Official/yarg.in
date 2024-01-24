@@ -69,28 +69,28 @@ const Footer: React.FC = async () => {
         </div>
 
         <div className={styles.socials}>
-            <a href="https://discord.gg/yarg" target="_blank">
+            <a href="https://discord.gg/yarg" aria-label="YARG's discord" target="_blank">
                 <Discord />
             </a>
-            <a href="https://github.com/YARC-Official" target="_blank">
+            <a href="https://github.com/YARC-Official" aria-label="Github Organization" target="_blank">
                 <Github />
             </a>
-            <a href="https://x.com/yarggame" target="_blank">
+            <a href="https://x.com/yarggame" aria-label="YARG's Twitter" target="_blank">
                 <X />
             </a>
-            <a href="https://www.youtube.com/@YARGGame" target="_blank">
+            <a href="https://www.youtube.com/@YARGGame" aria-label="YARG's Youtube Channel" target="_blank">
                 <Youtube />
             </a>
-            <a href="https://www.reddit.com/r/yarg/" target="_blank">
+            <a href="https://www.reddit.com/r/yarg/" aria-label="YARG's subreddit" target="_blank">
                 <Reddit />
             </a>
-            <a href="https://www.twitch.tv/yarggame" target="_blank">
+            <a href="https://www.twitch.tv/yarggame" aria-label="YARG's Twitch Channel" target="_blank">
                 <Twitch />
             </a>
-            <a href="https://www.instagram.com/yarg.game" target="_blank">
+            <a href="https://www.instagram.com/yarg.game" aria-label="YARG's Instagram" target="_blank">
                 <Instagram />
             </a>
-            <a href="https://www.tiktok.com/@yarggame" target="_blank">
+            <a href="https://www.tiktok.com/@yarggame" aria-label="YARG's Tiktok" target="_blank">
                 <TikTok />
             </a>
         </div>

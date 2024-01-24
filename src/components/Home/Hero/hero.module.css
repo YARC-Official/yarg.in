@@ -1,5 +1,5 @@
 .hero {
-    background: url(/notes.png) top center / cover, url(/gradient.png) center / 100% 100%;
+    background: url(/notes.webp) top center / cover, url(/gradient.webp) center / 100% 100%;
     background-color: var(--heroBackground);
     display: flex;
     flex-direction: column;
@@ -73,7 +73,7 @@
 }
 
 .hero .video .gem[data-color="green"] {
-    background: url(/green-gem.png);
+    background: url(/green-gem.webp);
     aspect-ratio: 1;
     height: 227px;
     top: -85px;
@@ -81,7 +81,7 @@
 }
 
 .hero .video .gem[data-color="blue"] {
-    background: url(/blue-gem.png);
+    background: url(/blue-gem.webp);
     aspect-ratio: 1;
     height: 149px;
     bottom: -35px;
