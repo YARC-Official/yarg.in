@@ -3,7 +3,7 @@ import styles from "./hero.module.css";
 import RotatingWords from '@/components/RotatingWords';
 import Header from '@/components/Header';
 import Button from "@/components/Button";
-import { Github } from "@/assets/Icons";
+import { Discord } from "@/assets/Icons";
 import { Package } from "lucide-react";
 
 const HomeHero: React.FC = () => {
@@ -18,15 +18,19 @@ const HomeHero: React.FC = () => {
         </div>
 
         <div className={styles.buttons}>
-          <Button color="blue">
-            <Package />
-            Download
-          </Button>
+          <a href="https://github.com/YARC-Official/YARC-Launcher/releases/latest">
+            <Button color="blue">
+              <Package />
+              Download
+            </Button>
+          </a>
 
-          <Button>
-            <Github />
-            Check our Repository
-          </Button>
+          <a href="https://discord.gg/sqpu4R552r" target="_blank">
+            <Button>
+              <Discord />
+              Join our community
+            </Button>
+          </a>
         </div>
       </div>
 

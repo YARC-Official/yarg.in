@@ -45,6 +45,10 @@
     gap: 15px;
 }
 
+.hero .buttons a > * {
+    height: 100%;
+}
+
 .hero .video {
     position: relative;
     aspect-ratio: 16/9;

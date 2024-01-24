@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -9,6 +9,8 @@ const description = "YARG (a.k.a. Yet Another Rhythm Game) is a free, open-sourc
 const twitterAccount = "@YARGGame";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yarg.in'),
+
   title: {
     template: '%s | Yet Another Rhythm Game',
     absolute: defaultTitle
@@ -17,7 +19,6 @@ export const metadata: Metadata = {
   description: description,
   keywords: ["YARG", "Yet Another Rhythm Game", "Rock Band", "Guitar Hero", "Clone Hero"],
   creator: twitterAccount,
-  themeColor: "#080b13",
 
   openGraph: {
     locale: "en-US",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     siteName: defaultTitle,
     description: description,
     url: "https://yarg.in",
+    images: "/opengraph-image.png",
   },
 
   twitter: {
@@ -34,8 +36,12 @@ export const metadata: Metadata = {
     description: description,
     site: "https://yarg.in",
     creator: twitterAccount,
-    images: "https://yarg.in/banner.png",
+    images: "/twitter-banner.png",
   }
+}
+
+export const viewport: Viewport = {
+  themeColor: '#080b13',
 }
 
 export default function RootLayout({

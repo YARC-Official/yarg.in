@@ -2,8 +2,11 @@ import React from 'react';
 import styles from "./footer.module.css";
 import { Discord, Github, Instagram, Reddit, TikTok, Twitch, X, Youtube } from '@/assets/Icons';
 import YARGLogo from "@/assets/YARGLogo.svg";
+import { getContributors } from '@/utils/contributors';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = async () => {
+    const contributors = await getContributors();
+
   return <footer className={styles.footer}>
 
     <div className={styles.information}>
@@ -14,7 +17,7 @@ const Footer: React.FC = () => {
                 Yet Another Rhythm Game inspired by beloved classics, delivering an immersive fret rhythm experience.
             </div>
             <div className={styles.contributors}>
-                Made with a lot of love by 33 contributors
+                Made with a lot of love by { contributors.length } contributors
             </div>
         </div>
 
@@ -22,25 +25,36 @@ const Footer: React.FC = () => {
             <div className={styles.column}>
                 <div className={styles.title}>Game</div>
                 <ul>
-                    <li>Features</li>
-                    <li>Download</li>
-                    <li>Setlist</li>
+                    {/* <li>Features</li> */}
+                    <a href="https://github.com/YARC-Official/YARC-Launcher/releases/latest">
+                        <li>Download</li>
+                    </a>
+                    {/* <li>Setlist</li> */}
                 </ul>
             </div>
 
             <div className={styles.column}>
                 <div className={styles.title}>Community</div>
                 <ul>
-                    <li>News</li>
+                    {/* <li>News</li> */}
+                    <a href="https://docs.yarg.in/">
+                        <li>Documentation</li>
+                    </a>
                 </ul>
             </div>
 
             <div className={styles.column}>
                 <div className={styles.title}>Development</div>
                 <ul>
-                    <li>Nightly Build</li>
-                    <li>Contributors</li>
-                    <li>Roadmap</li>
+                    <a href="https://github.com/YARC-Official/YARG-BleedingEdge">
+                        <li>Nightly Builds</li>
+                    </a>
+
+                    {/* <li>Contributors</li> */}
+
+                    <a href="https://yarg.youtrack.cloud/issues">
+                        <li>Roadmap</li>
+                    </a>
                 </ul>
             </div>
         </div>
