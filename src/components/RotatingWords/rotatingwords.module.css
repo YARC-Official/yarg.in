@@ -1,0 +1,19 @@
+.rotator {
+    height: 1em;
+    overflow: clip;
+    position: relative;
+}
+
+.previousWord, .currentWord {
+    animation: slotDown .5s forwards;
+}
+
+@keyframes slotDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
