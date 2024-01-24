@@ -14,7 +14,7 @@ const HomeHero: React.FC = () => {
       <div className={styles.about}>
         <div className={styles.title}>
           <div className={styles.titleStatic}>Play on</div>
-          <RotatingWords className={styles.instrumentSection} words={["Pro Guitar", "Pro Drums", "Vocal", "Keys", "Guitar", "Bass"]} intervalTime={2500} />
+          <RotatingWords className={styles.instrumentSection} words={["Harmonies", "Pro Drums", "Vocal", "Keys", "Guitar", "Bass"]} intervalTime={2500} />
         </div>
 
         <div className={styles.buttons}>

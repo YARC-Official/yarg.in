@@ -69,7 +69,7 @@ const Footer: React.FC = async () => {
         </div>
 
         <div className={styles.socials}>
-            <a href="https://discord.gg/yarg" aria-label="YARG's discord" target="_blank">
+            <a href="https://discord.gg/sqpu4R552r" aria-label="YARG's discord" target="_blank">
                 <Discord />
             </a>
             <a href="https://github.com/YARC-Official" aria-label="Github Organization" target="_blank">
