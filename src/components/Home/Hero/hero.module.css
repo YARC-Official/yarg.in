@@ -25,6 +25,11 @@
     margin-bottom: 10px;
 }
 
+.hero .about {
+    width: 100%;
+    max-width: 700px;
+}
+
 .hero .title {
     font-family: var(--font-red-hat-display);
     font-weight: 900;
@@ -40,9 +45,9 @@
 
 .hero .buttons {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
     gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0px 50px;
 }
 
 .hero .buttons a > * {

@@ -67,8 +67,8 @@
     border-top: 1px solid #191F3C;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1em;
+    flex-wrap: wrap-reverse;
+    gap: 1.5em;
 }
 
 .footer .copyright .company,
@@ -76,6 +76,7 @@
     display: flex;
     gap: 25px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer .copyright .company {
