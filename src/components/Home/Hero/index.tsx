@@ -3,7 +3,7 @@ import styles from "./hero.module.css";
 import RotatingWords from '@/components/RotatingWords';
 import Header from '@/components/Header';
 import Button from "@/components/Button";
-import { Github } from "lucide-react";
+import { Github } from "@/assets/Icons";
 
 const HomeHero: React.FC = () => {
   return <div className={styles.hero}>

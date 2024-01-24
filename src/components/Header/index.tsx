@@ -1,4 +1,5 @@
 import React from 'react';
+import YARGLogo from "@/assets/YARGLogo.svg";
 import styles from "./header.module.css";
 
 export type HeaderMode = "dark" | "transparent";
@@ -12,7 +13,7 @@ const Header: React.FC<Props> = ({
 }: Props) => {
 
     return <header data-mode={mode} className={styles.header}>
-        {/* <Logo className={styles.logo} /> */}
+        <YARGLogo className={styles.logo} />
 
         <ul>
             <li>Features</li>

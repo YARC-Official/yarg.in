@@ -1,0 +1,84 @@
+.footer {
+    padding: 50px;
+    background: var(--headerBackground);
+    color: #fff;
+}
+
+.footer .information {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15%;
+}
+
+.footer .about {
+    max-width: 350px;
+    margin-bottom: 40px;
+}
+
+.footer .logo {
+    height: 75px;
+}
+
+.footer .description,
+.footer .navigation {
+    margin-bottom: 40px;
+}
+
+.footer .description {
+    margin: 10px 0px;
+    font-weight: 700;
+}
+
+.footer .contributors {
+    color: var(--headerAccent);
+    font-size: 0.85em;
+}
+
+.footer .navigation {
+    --_columnSize: 230px;
+    --_maxColumns: 3;
+    --_columnGap: 25px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+    gap: 25px;
+    justify-content: end;
+}
+
+.footer .navigation .title {
+    font-weight: 700;
+    margin-bottom: 0.7em;
+    text-transform: uppercase;
+}
+
+.footer .navigation ul {
+    color: var(--headerAccent);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.footer .copyright {
+    padding-top: 25px;
+    border-top: 1px solid #191F3C;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .copyright .company,
+.footer .copyright .socials {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.footer .copyright .company {
+    font-size: 0.8em;
+    color: var(--headerAccent);
+}
+
+.footer .copyright .company .link:first-child {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+}
