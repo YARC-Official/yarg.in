@@ -6,24 +6,36 @@ export type HeaderMode = "dark" | "transparent";
 
 type Props = {
     mode?: HeaderMode;
+    children?: React.ReactNode;
+    className?: string,
 }
 
 const Header: React.FC<Props> = ({
-    mode = "dark"
+    mode = "dark",
+    children,
+    className,
 }: Props) => {
 
-    return <header data-mode={mode} className={styles.header}>
-        <YARGLogo className={styles.logo} />
+    return <div className={[styles.header, className].join(" ")}>
+        <header data-mode={mode} className={styles.bar}>
+            <YARGLogo className={styles.logo} />
+            <Navigation />
+        </header>
+
+        { children }
+    </div>
+}
+
+function Navigation() {
+    return (<>
         <ul>
-
-        {/* 
-            TO-DO: These pages still not developed.
-            <li>Features</li>
-            <li>Downloads</li>
-            <li>Community</li>
-            <li>News</li>
-        */}
-
+            {/* 
+                TO-DO: These pages still not developed.
+                <li>Features</li>
+                <li>Downloads</li>
+                <li>Community</li>
+                <li>News</li>
+            */}
 
             <a href="https://yarg.youtrack.cloud/issues" target="_blank">
                 <li>Roadmap</li>
@@ -33,8 +45,7 @@ const Header: React.FC<Props> = ({
                 <li>Documentation</li>
             </a>
         </ul> 
-
-    </header>;
+    </>);
 }
 
 export default Header;

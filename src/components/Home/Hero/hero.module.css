@@ -21,10 +21,6 @@
     -webkit-text-fill-color: transparent;
 }
 
-.hero header {
-    margin-bottom: 10px;
-}
-
 .hero .about {
     width: 100%;
     max-width: 700px;
