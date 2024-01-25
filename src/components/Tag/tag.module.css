@@ -1,0 +1,43 @@
+.tag {
+    position: relative;
+    font-weight: 400;
+
+    font-size: 0.8em;
+    padding: 0.395em 0.8em;
+    border-radius: 1em;
+
+    width: fit-content;
+
+    background: var(--tag_background, #072126);
+    color: var(--tag_accent, #2ED9FF);
+}
+
+.tag[data-color="blue"] {
+    --tag_background: #072126;
+    --tag_accent: #2ED9FF; 
+}
+
+.tag[data-color="green"] {
+    --tag_background: #032215;
+    --tag_accent: #77FFC3; 
+}
+
+.tag[data-color="yellow"] {
+    --tag_background: #261800;
+    --tag_accent: #FFDA92; 
+}
+
+.tag[data-color="purple"] {
+    --tag_background: #170B25;
+    --tag_accent: #B881FF; 
+}
+
+.tag[data-color="red"] {
+    --tag_background: #271213;
+    --tag_accent: #FF7C7C; 
+}
+
+.tag[data-color="pink"] {
+    --tag_background: #261324;
+    --tag_accent: #FF7CFA; 
+}

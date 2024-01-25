@@ -27,6 +27,17 @@ const nextConfig = {
 
         return config
     },
+
+    images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'news.yarg.in',
+            port: '',
+            pathname: '/images/**',
+          },
+        ],
+      }
 }
 
 module.exports = nextConfig
