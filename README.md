@@ -43,6 +43,6 @@ The local development page should be live on http://localhost:3000
 
 If you want to contribute with the website, please feel free! 
 
-We recommend joining [our Discord](https://discord.gg/sqpu4R552r) and heading over to **#online-dev-chat** with your contribution idea before starting any work to make sure there's no conflifts with another contributors work.
+We recommend joining [our Discord](https://discord.gg/sqpu4R552r) and heading over to **#leaderboard-dev** with your contribution idea before starting any work to make sure there's no conflifts with another contributors work.
 
 We have our website all mocked-up by our design team. If you need to add new sections added or make changes to the design, please check before with the design team on our Discord.
