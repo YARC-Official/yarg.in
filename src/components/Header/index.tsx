@@ -1,6 +1,7 @@
 import React from 'react';
 import YARGLogo from "@/assets/YARGLogo.svg";
 import styles from "./header.module.css";
+import Link from 'next/link';
 
 export type HeaderMode = "dark" | "transparent";
 
@@ -18,7 +19,9 @@ const Header: React.FC<Props> = ({
 
     return <div className={[styles.header, className].join(" ")}>
         <header data-mode={mode} className={styles.bar}>
-            <YARGLogo className={styles.logo} />
+            <Link href={"/"}>
+                <YARGLogo className={styles.logo} />
+            </Link>
             <Navigation />
         </header>
 
