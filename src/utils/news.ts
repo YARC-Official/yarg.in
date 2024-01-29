@@ -1,6 +1,9 @@
 import { TagColor } from "@/components/Tag"
 import { NEWS_SOURCE } from "./constants"
 import { z } from "zod";
+import matter from "gray-matter";
+
+// TO-DO: Move all schemas to it's own file/folder.
 
 export const ValidArticleTypes = z.union([
     z.literal("update"), 
@@ -25,7 +28,7 @@ export const BaseArticleSchema = z.object({
     type: ValidArticleTypes,
     title: z.string(),
     banner: z.string().url().optional(),
-    author: z.array(z.string()),
+    authors: z.array(z.string()),
     release: z.string().datetime().optional(),
     video: z.string().url().optional(),
 });
@@ -34,7 +37,8 @@ export type BaseArticle = z.infer<typeof BaseArticleSchema>;
 
 const ArticleSchema = BaseArticleSchema.merge(
     z.object({
-        author: z.array(ArticleAuthor)
+        authors: z.array(ArticleAuthor),
+        content: z.string(),
     }
 ));
 
@@ -77,8 +81,24 @@ export const articleTypes: {
     }
 }
 
-export const getArticle = async (slug: string) => {
-    const article = await fetch(`${NEWS_SOURCE}/articles/${slug}.md`, { next: { tags: ["articles", `article-${slug}`] } }).then(res => res.text());
+export const getArticle = async (slug: string): Promise<Article> => {
+    const raw = await fetch(`${NEWS_SOURCE}/articles/${slug}.md`, { next: { tags: ["articles", `article-${slug}`] } }).then(res => res.text());
+    const { data, content } = matter(raw);
+    
+    const parsedData = BaseArticleSchema.parse(data);
 
-    return article;
+    const authors = await Promise.all(
+        parsedData.authors.map(id => getAuthorData(id))
+    );
+
+    return {
+        ...parsedData,
+        authors,
+        content
+    };
+}
+
+export const getAuthorData = async (id: string) => {
+    const raw: ArticleAuthor = await fetch(`${NEWS_SOURCE}/authors/${id}.json`, { next: { tags: ["articles", `article-author-${id}`] } }).then(res => res.json());
+    return raw;
 }
