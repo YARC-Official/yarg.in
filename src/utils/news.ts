@@ -27,7 +27,7 @@ export type ArticleAuthor = z.infer<typeof ArticleAuthor>;
 export const BaseArticleSchema = z.object({
     type: ValidArticleTypes,
     title: z.string(),
-    banner: z.string().url().optional(),
+    banner: z.string().optional(), // TO-DO: create a refine for checking if string = `filename.{png|jpg|jpeg|webp}`
     authors: z.array(z.string()),
     release: z.string().datetime().optional(),
     video: z.string().url().optional(),

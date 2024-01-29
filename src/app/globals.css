@@ -4,6 +4,9 @@
   --blue: #2ED9FF;
   --maxWidth: 1200px;
 
+  --background: white;
+  --foreground: #333;
+
   --heroBackground: #060811;
   --headerBackground: #05060B;
   --headerAccent: #717F9E;

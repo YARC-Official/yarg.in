@@ -36,3 +36,21 @@
 
     background: linear-gradient(180deg, #000 -8%, rgba(0, 0, 0, 0) 50%), linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 130%);
 }
+
+.main {
+    margin: 50px auto 100px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content a {
+    text-decoration: underline;
+}
+
+.content img {
+    max-width: 100%;
+}
