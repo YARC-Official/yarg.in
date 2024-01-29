@@ -5,7 +5,7 @@
   --maxWidth: 1200px;
 
   --background: white;
-  --foreground: #333;
+  --foreground: #7A7A7A;;
 
   --heroBackground: #060811;
   --headerBackground: #05060B;
@@ -37,6 +37,6 @@ a {
 main {
   position: relative;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   max-width: var(--max-width);
 }

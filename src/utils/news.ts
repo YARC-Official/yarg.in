@@ -18,7 +18,7 @@ export type ArticleTypes = z.infer<typeof ValidArticleTypes>;
 
 export const ArticleAuthor = z.object({
     displayName: z.string(),
-    avatar: z.string().url().optional(),
+    avatar: z.string().optional(), // TO-DO: create a refine for checking if string = `filename.{png|jpg|jpeg|webp}`
     role: z.string().optional(),
 });
 
@@ -100,5 +100,5 @@ export const getArticle = async (slug: string): Promise<Article> => {
 
 export const getAuthorData = async (id: string) => {
     const raw: ArticleAuthor = await fetch(`${NEWS_SOURCE}/authors/${id}.json`, { next: { tags: ["articles", `article-author-${id}`] } }).then(res => res.json());
-    return raw;
+    return ArticleAuthor.parse(raw);
 }

@@ -6,6 +6,7 @@ import { articleTypes, getArticle } from '@/utils/news';
 import { NEWS_DEFAULT_BANNER, NEWS_IMAGES_URL } from '@/utils/constants';
 import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
+import Author from '@/components/News/Author';
 
 type Props = {
   params: {
@@ -30,6 +31,12 @@ const ArticlePage: React.FC<Props> = async ({ params }) => {
     </Header>
 
     <main className={styles.main}>
+      <div className={styles.authors}>
+        {
+          article.authors.map(author => <Author key={author.displayName} {...author} />)
+        }
+      </div>
+
       <div className={styles.content}>
         <Markdown>{article.content}</Markdown>
       </div>
