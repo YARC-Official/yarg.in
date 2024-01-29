@@ -2,17 +2,30 @@ import Header from '@/components/Header';
 import styles from './article.module.css';
 import Tag from '@/components/Tag';
 import Image from "next/image";
-import { articleTypes, getArticle } from '@/utils/news';
+import { articleTypes, generateBannerURL, getArticle } from '@/utils/news';
 import { NEWS_DEFAULT_BANNER, NEWS_IMAGES_URL } from '@/utils/constants';
 import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
 import Author from '@/components/News/Author';
+import { Metadata, ResolvingMetadata } from 'next';
 
 type Props = {
   params: {
     slug: string,
   }
 };
+
+export async function generateMetadata({params}: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const article = await getArticle(params.slug);
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: article.title,
+    openGraph: {
+      images: article.banner ? generateBannerURL(article.banner) : previousImages
+    }
+  }
+}
 
 const ArticlePage: React.FC<Props> = async ({ params }) => {
   const article = await getArticle(params.slug);
@@ -26,7 +39,7 @@ const ArticlePage: React.FC<Props> = async ({ params }) => {
       </div>
 
       <div className={styles.banner}>
-        <Image src={article.banner ? `${NEWS_IMAGES_URL}/banners/${article.banner}` : NEWS_DEFAULT_BANNER} priority={true} alt="Article Banner" fill={true} />
+        <Image src={article.banner ? generateBannerURL(article.banner) : NEWS_DEFAULT_BANNER} priority={true} alt="Article Banner" fill={true} />
       </div>
     </Header>
 

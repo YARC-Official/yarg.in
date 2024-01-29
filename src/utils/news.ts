@@ -1,5 +1,5 @@
 import { TagColor } from "@/components/Tag"
-import { NEWS_SOURCE } from "./constants"
+import { NEWS_IMAGES_URL, NEWS_SOURCE } from "./constants"
 import { z } from "zod";
 import matter from "gray-matter";
 
@@ -101,4 +101,8 @@ export const getArticle = async (slug: string): Promise<Article> => {
 export const getAuthorData = async (id: string) => {
     const raw: ArticleAuthor = await fetch(`${NEWS_SOURCE}/authors/${id}.json`, { next: { tags: ["articles", `article-author-${id}`] } }).then(res => res.json());
     return ArticleAuthor.parse(raw);
+}
+
+export const generateBannerURL = (url: string) => {
+    return `${NEWS_IMAGES_URL}/banners/${url}`;
 }
