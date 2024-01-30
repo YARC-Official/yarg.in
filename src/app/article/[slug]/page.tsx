@@ -2,8 +2,8 @@ import Header from '@/components/Header';
 import styles from './article.module.css';
 import Tag from '@/components/Tag';
 import Image from "next/image";
-import { articleTypes, generateBannerURL, getArticle } from '@/utils/news';
-import { NEWS_DEFAULT_BANNER, NEWS_IMAGES_URL } from '@/utils/constants';
+import { articleTypes, generateBannerURL, getArticle, getLatestArticles } from '@/utils/news';
+import { NEWS_DEFAULT_BANNER } from '@/utils/constants';
 import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
 import Author from '@/components/News/Author';
@@ -15,6 +15,14 @@ type Props = {
     slug: string,
   }
 };
+
+export async function generateStaticParams() {
+  const articles = await getLatestArticles();
+ 
+  return articles.map((post) => ({
+    slug: post.md,
+  }))
+}
 
 export async function generateMetadata({params}: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const article = await getArticle(params.slug);

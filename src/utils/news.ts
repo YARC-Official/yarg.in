@@ -106,3 +106,18 @@ export const getAuthorData = async (id: string) => {
 export const generateBannerURL = (url: string) => {
     return `${NEWS_IMAGES_URL}/banners/${url}`;
 }
+
+type ArticleList = Array<{
+    "md": string,
+    "type": ArticleTypes,
+    "title": string,
+    "authors": string[],
+    "thumb"?: string,
+    "release"?: string,
+    "category"?: string
+}>;
+
+export const getLatestArticles = async (): Promise<ArticleList> => {
+    const { articles } = await fetch(`${NEWS_SOURCE}/index.json`, { next: { tags: ["articles", "articles-list"] } }).then((res) => res.json());
+    return articles;
+}
