@@ -1,20 +1,15 @@
----
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+## Description
+[Briefly describe what needs to be done]
 
----
+## Screens or Components
+[List the screens or components related to this issue]
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Useful Links
+[Add any relevant links, such as documentation, wireframes, etc.]
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Priority
+[Set the priority of the issue - High, Medium, Low, etc.]
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Notes
+[Add any additional notes or important information]
