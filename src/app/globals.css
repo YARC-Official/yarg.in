@@ -4,6 +4,9 @@
   --blue: #2ED9FF;
   --maxWidth: 1200px;
 
+  --background: white;
+  --foreground: #7A7A7A;;
+
   --heroBackground: #060811;
   --headerBackground: #05060B;
   --headerAccent: #717F9E;
@@ -17,10 +20,7 @@
 
 body {
   color: var(--foreground);
-  /* background: var(--background); */
-
-  /* TO-DO: change back to white after adding more content to home */
-  background: var(--headerBackground);
+  background: var(--background);
 }
 
 a {
@@ -37,6 +37,6 @@ a {
 main {
   position: relative;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   max-width: var(--max-width);
 }

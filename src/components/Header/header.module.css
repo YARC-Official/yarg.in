@@ -1,5 +1,6 @@
 .header {
     width: 100%;
+    position: relative;
 }
 
 .bar {
@@ -21,6 +22,8 @@
 
 .bar .logo {
     height: 60%;
+    max-width: 100px;
+    width: 100%;
 }
 
 .bar ul {

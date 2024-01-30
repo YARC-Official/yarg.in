@@ -1,0 +1,22 @@
+.author {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.author .avatar {
+    display: flex;
+    align-items: center;
+
+    border-radius: 100%;
+    width: 48px;
+    aspect-ratio: 1;
+}
+
+.author .info .name {
+    font-weight: 600;
+}
+
+.author .info .role {
+    font-size: 0.7em;
+}
