@@ -26,7 +26,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({params}: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const article = await getArticle(params.slug);
-  const previousImages = (await parent).openGraph?.images || [];
+  const mainMetadata = await parent;
+  const previousImages = mainMetadata.openGraph?.images || [];
 
   const maxCharacters = 200;
   const description = markdownToTxt(article.content).substring(0, maxCharacters) + "...";
@@ -38,10 +39,15 @@ export async function generateMetadata({params}: Props, parent: ResolvingMetadat
     description,
 
     openGraph: {
+      siteName: "YARG | Yet Another Rhythm Game",
+      type: "article",
+      title: article.title,
       images
     },
 
     twitter: {
+      site: "@YARGGame",
+      title: article.title,
       description,
       images
     }
