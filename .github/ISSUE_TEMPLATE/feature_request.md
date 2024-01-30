@@ -23,3 +23,4 @@ assignees: ''
 [Add any additional notes or important information]
 
 ## Acceptance Criteria
+[Add a list of acceptance criteria for this task]
