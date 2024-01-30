@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import Markdown from 'react-markdown';
 import Author from '@/components/News/Author';
 import { Metadata, ResolvingMetadata } from 'next';
+import markdownToTxt from 'markdown-to-txt';
 
 type Props = {
   params: {
@@ -19,10 +20,22 @@ export async function generateMetadata({params}: Props, parent: ResolvingMetadat
   const article = await getArticle(params.slug);
   const previousImages = (await parent).openGraph?.images || [];
 
+  const maxCharacters = 200;
+  const description = markdownToTxt(article.content).substring(0, maxCharacters) + "...";
+
+  const images = article.banner ? generateBannerURL(article.banner) : previousImages;
+  
   return {
     title: article.title,
+    description,
+
     openGraph: {
-      images: article.banner ? generateBannerURL(article.banner) : previousImages
+      images
+    },
+
+    twitter: {
+      description,
+      images
     }
   }
 }
