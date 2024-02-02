@@ -1,0 +1,69 @@
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+  padding: 3px 14px;
+  background-color: #05060b;
+  border-right: 1px solid #0f121d;
+  height: 75px;
+  max-height: 75px;
+}
+
+.linkOpen {
+  height: 50px;
+}
+
+.linkClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ed9ff;
+  height: 75px;
+}
+
+.logoFull {
+  height: 50px;
+  fill: #f5f5f5;
+}
+
+.logoMin {
+  height: 50px;
+  width: 50px;
+  fill: #0f060b;
+}
+
+.space {
+  flex: 1;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2ed9ff;
+  height: 19px;
+  color: #05060b;
+  padding: 5px 7px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.collapse {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 11px;
+  background-color: #080a13;
+  color: #60688c;
+  border: none;
+  padding: 7px;
+}
+
+.collapse:hover {
+  background-color: #0d0f23;  
+}
