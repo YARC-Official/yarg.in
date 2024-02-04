@@ -83,8 +83,8 @@ function Navigation() {
   return (
     <ul>  
       <NavItem label="Home" href="/" />
-      {navigation.map(({ href, name, redirect }, key) => (
-        <NavItem key={key} href={href} label={name} target={redirect ? "_blank" : "_self"} /> 
+      {navigation.map(({ href, name, redirect }) => (
+        <NavItem key={crypto.randomUUID()} href={href} label={name} target={redirect ? "_blank" : "_self"} /> 
       ))}
     </ul>
   );
