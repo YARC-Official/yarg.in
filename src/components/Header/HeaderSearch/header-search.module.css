@@ -1,12 +1,36 @@
-.search {
+.container {
    --_width: 600px;
+   --_height: 50px;
    --_horizontal-padding: 25px;
-   --_icon-size: 18px;
+   --_icon-size: 20px;
+   --_placeholder-color: #A6ACCA;
 
+   position: relative;
+   width: var(--_width);
+   min-width: 360px;
+   height: var(--_height); 
+}
+
+.icon {
+   width: var(--_icon-size);
+   height: var(--_icon-size);
+
+   position: absolute;
+
+   top: calc(var(--_height) / 2 - var(--_icon-size) / 2);
+   right: var(--_horizontal-padding);
+
+   color: #52586D;
+
+   cursor: pointer;
+}
+
+.search {
    outline: none;
 
-   width: var(--_width);
-   height: 50px;
+   width: 100%;
+   height: 100%;
+   position: relative;
 
    padding: 19px var(--_horizontal-padding);
    margin-right: 15px;
@@ -18,11 +42,6 @@
 
    border-radius: 50px;
    border: 1px solid #222638;
-
-   background-image: url('../../../assets/Icons/MagnifyingGlass.svg'); 
-   background-repeat: no-repeat;
-   background-position: calc(var(--_width) - var(--_horizontal-padding) - var(--_icon-size)) center;
-   background-size: var(--_icon-size);
 }
 
 .search:focus {
@@ -31,22 +50,22 @@
 }
 
 .search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-   color:#A6ACCA;
+   color: var(--_placeholder-color);
 }
 .search:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:#A6ACCA;
+   color: var(--_placeholder-color);
    opacity: 1;
 }
 .search::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:#A6ACCA;
+   color: var(--_placeholder-color);
    opacity: 1;
 }
 .search:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:#A6ACCA;
+   color: var(--_placeholder-color);
 }
 .search::-ms-input-placeholder { /* Microsoft Edge */
-   color:#A6ACCA;
+   color: var(--_placeholder-color);
 }
 .search::placeholder { /* Most modern browsers support this now. */
-   color:#A6ACCA;
+   color: var(--_placeholder-color);
 }

@@ -1,3 +1,4 @@
+import { Search } from "lucide-react";
 import styles from "./header-search.module.css";
 
 type Props = {
@@ -13,7 +14,7 @@ const HeaderSearch: React.FC<Props> = ({ value, handleChange, handleConfirm }) =
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <input
         className={styles.search}
         type="text"
@@ -22,6 +23,7 @@ const HeaderSearch: React.FC<Props> = ({ value, handleChange, handleConfirm }) =
         onChange={(event) => handleChange(event.target.value)}
         onKeyDown={({ key }) => handleKeyPress(key)}
       />
+      <Search className={styles.icon} role="button" onClick={handleConfirm} />
     </div>
   );
 };
