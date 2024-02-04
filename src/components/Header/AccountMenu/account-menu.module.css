@@ -18,14 +18,13 @@
   cursor: pointer;
 }
 
-.greeting::before {
+.greeting {
   font: 16px;
   font-weight: 400;
   color: #717F9E;
-  content: "Hey, ";
 }
 
-.username {
+.greeting span {
   font-weight: 600;
   color: #FFFFFF;
 }

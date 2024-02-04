@@ -11,7 +11,7 @@ type Props = {
 
 const WarningBanner: React.FC<Props> = ({ href, message, onClick }) => {
   return (
-    <div className={[styles.banner, styles.warning].join(" ")} onClick={onClick}>
+    <div className={[styles.banner, styles.warning].join(" ")} onClick={onClick} role="button">
      <AlertTriangle className={styles.icon} /><a href={href} target="_blank">{message} Click here to know more.</a>
     </div>
   );
@@ -19,7 +19,7 @@ const WarningBanner: React.FC<Props> = ({ href, message, onClick }) => {
 
 const AnnouncementBanner: React.FC<Props> = ({ href, message, onClick }) => {
   return (
-    <div className={[styles.banner, styles.announcement].join(" ")} onClick={onClick}>
+    <div className={[styles.banner, styles.announcement].join(" ")} onClick={onClick} role="button">
      <Megaphone className={styles.icon} /><a href={href} target="_blank">{message} Click here to know more.</a>
     </div>
   );
@@ -27,7 +27,7 @@ const AnnouncementBanner: React.FC<Props> = ({ href, message, onClick }) => {
 
 const LiveBanner: React.FC<Props> = ({ href, message, onClick }) => {
   return (
-    <div className={[styles.banner, styles.live].join(" ")} onClick={onClick}>
+    <div className={[styles.banner, styles.live].join(" ")} onClick={onClick} role="button">
      <Twitch className={styles.icon} /><a href={href} target="_blank">{message} Click here to know more.</a>
     </div>
   );

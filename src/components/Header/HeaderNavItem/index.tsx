@@ -13,8 +13,8 @@ const NavItem: React.FC<Props> = ({ label, href, target = "_self" }) => {
   const isActive = pathname === href;
 
   return (
-    <a href={href} target={target}>
-      <li className={isActive ? styles.active : styles.default}>{label}</li>
+    <a href={href} target={target} className={isActive ? styles.active : styles.default}>
+      {label}
     </a>
   );
 };

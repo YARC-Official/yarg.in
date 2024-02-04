@@ -9,9 +9,9 @@ const AccountMenu = () => {
   return ( 
     <section className={styles.container} >
       <Menu className={styles.icon} />
-      <span className={styles.greeting}>
-        <span className={styles.username}>{username}</span>
-      </span>
+      <p className={styles.greeting}>
+        Hey, <span>{username}</span>
+      </p>
       <Image className={styles.avatar} src={AvatarPlaceholder} alt="Avatar" />
     </section>
   );
