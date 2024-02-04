@@ -9,14 +9,6 @@ import NavItem from "./HeaderNavItem";
 import HeaderSearch from "./HeaderSearch";
 import styles from "./header.module.css";
 
-export type HeaderMode = "dark" | "transparent";
-
-type Props = {
-  mode?: HeaderMode;
-  children?: React.ReactNode;
-  className?: string;
-};
-
 const navigation = [
   {
     href: "/news",
@@ -42,12 +34,7 @@ const navigation = [
   }
 ];
 
-const Header: React.FC<Props> = ({
-  mode = "dark",
-  children,
-  className,
-}: Props) => {
-
+const Header: React.FC = () => {
   const [searchValue, setSearchValue] = useState<string>("");
 
   // Temporary mocks
@@ -64,18 +51,17 @@ const Header: React.FC<Props> = ({
   const handleBannerClick = () => {};
 
   return (
-    <div className={[styles.header, className].join(" ")}>
+    <>
       {/* <HeaderBanner.Warning message={mockedBannerMessage} /> */}
       {/* <HeaderBanner.Announcement message={mockedBannerMessage} onClick={handleBannerClick} /> */}
       {/* <HeaderBanner.Live href={mockedTwitchBannerHref} message={mockedTwitchBannerMessage} /> */}
       
-      <header data-mode={mode} className={styles.bar}>
+      <header className={[styles.header, styles.bar].join(" ")}>
         <HeaderSearch value={searchValue} handleChange={setSearchValue} handleConfirm={handleSearchConfirm} />
         <Navigation />
         {isLogged ? <LoggedInComponents /> : null}
       </header>
-      {children}
-    </div>
+    </>
   );
 };
 

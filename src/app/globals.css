@@ -10,6 +10,8 @@
   --heroBackground: #060811;
   --headerBackground: #05060B;
   --headerAccent: #717F9E;
+
+  --headerHeight: 75px;
 }
 
 * {
@@ -21,6 +23,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  padding-top: var(--headerHeight);
 }
 
 a {
