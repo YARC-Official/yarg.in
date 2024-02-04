@@ -101,6 +101,8 @@ const release = {
   text: "New release 0.12" 
 }
 
+const version = "v0.12.0"
+
 const SideBar: React.FC = () => {
   const router = useRouter();
   const query = useSearchParams();
@@ -115,20 +117,20 @@ const SideBar: React.FC = () => {
   
   return (
     <div className={styles.sidebar} aria-expanded={!isClose}>
-      {!isClose ? <SideBarHeader.Open tag="v0.12.0" onClose={handleToggle}/> : <SideBarHeader.Close />}
+      {!isClose ? <SideBarHeader.Open tag={version} onClose={handleToggle}/> : <SideBarHeader.Close />}
       <div className={styles.navigation}>
         {isClose && (
           <button type="button" className={styles.link} onClick={handleToggle}>
             <ArrowRightFromLine className={styles.icon} />
           </button>
         )}
-        {navigation?.map(({separator, links}, index) => (
-          <section key={index} className={styles.section}>
+        {navigation?.map(({separator, links}) => (
+          <section key={crypto.randomUUID()} className={styles.section}>
             {(separator && (isClose || typeof separator === 'boolean')) && <span className={styles.separator} />}
             {!isClose && typeof separator === 'string' && <span className={styles.separatorNamed}>{separator}</span>}
-            {links.map(({href, icon: Icon, name}, key) => (
-              <div key={key} className={parseClassName([styles.relative, pathname === href ? styles.active : ""])}>
-                <Link href={`${href}${isClose ? "?closed" : ""}`} className={styles.link}>
+            {links.map(({href, icon: Icon, name}) => (
+              <div key={crypto.randomUUID()} className={parseClassName([styles.relative, pathname === href ? styles.active : ""])}>
+                <Link href={{pathname: href, query: isClose ? "closed" : undefined}}  className={styles.link}>
                   <Icon className={styles.icon} absoluteStrokeWidth /> 
                   <span className={styles.name}>{name}</span>
                 </Link>
