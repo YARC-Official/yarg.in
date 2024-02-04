@@ -1,0 +1,27 @@
+.banner {
+  height: 35px;
+  width: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.warning {
+  background-color: #F32B37;
+}
+
+.announcement {
+  background-color: #17E289;
+}
+
+.live {
+  background-color: #9447F9;
+}
+
+.icon {
+  width: 19px;
+  margin: 0 10px;
+}

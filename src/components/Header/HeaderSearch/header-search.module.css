@@ -1,0 +1,52 @@
+.search {
+   --_width: 600px;
+   --_horizontal-padding: 25px;
+   --_icon-size: 18px;
+
+   outline: none;
+
+   width: var(--_width);
+   height: 50px;
+
+   padding: 19px var(--_horizontal-padding);
+   margin-right: 15px;
+
+   font-family: inherit;
+   font-size: 16px;
+
+   background-color: #0F121D;
+
+   border-radius: 50px;
+   border: 1px solid #222638;
+
+   background-image: url('../../../assets/Icons/MagnifyingGlass.svg'); 
+   background-repeat: no-repeat;
+   background-position: calc(var(--_width) - var(--_horizontal-padding) - var(--_icon-size)) center;
+   background-size: var(--_icon-size);
+}
+
+.search:focus {
+   color: #676B7D;
+   background-color: #FFFFFF;
+}
+
+.search::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+   color:#A6ACCA;
+}
+.search:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:#A6ACCA;
+   opacity: 1;
+}
+.search::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:#A6ACCA;
+   opacity: 1;
+}
+.search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:#A6ACCA;
+}
+.search::-ms-input-placeholder { /* Microsoft Edge */
+   color:#A6ACCA;
+}
+.search::placeholder { /* Most modern browsers support this now. */
+   color:#A6ACCA;
+}
