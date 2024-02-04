@@ -30,14 +30,24 @@ const nextConfig = {
 
     images: {
         remotePatterns: [
-          {
-            protocol: 'https',
-            hostname: 'news.yarg.in',
-            port: '',
-            pathname: '/images/**',
-          },
+            {
+                protocol: 'https',
+                hostname: 'news.yarg.in',
+                port: '',
+                pathname: '/images/**',
+            },
         ],
-      }
+    },
+
+    async redirects() {
+        return [
+            {
+                source: '/roadmap',
+                destination: 'https://yarg.youtrack.cloud/agiles/147-7/current',
+                permanent: false,
+              },
+        ]
+    },
 }
 
 module.exports = nextConfig
