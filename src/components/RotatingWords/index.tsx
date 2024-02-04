@@ -11,7 +11,7 @@ type Props = {
 
 const RotatingWords: React.FC<Props> = ({ words, className, intervalTime = 2500 }) => {
 
-    const filteredWords = words.filter((word): word is string => word !== null && word !== undefined);
+    const filteredWords = words.filter(Boolean);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const change = () => {
