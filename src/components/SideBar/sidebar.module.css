@@ -1,0 +1,274 @@
+.logo {
+    width: 8rem;
+}
+
+.container {
+    max-width: 20rem;
+    width: 100%;
+    background-color: #070810;
+}
+
+.container_closed {
+    max-width: 75px;
+    width: 100%;
+    background-color: #070810;
+}
+
+.box_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0F121D;
+    padding: 1rem;
+}
+
+.box_logo div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.box_logo button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 11px;
+    background-color: #080A13;
+    color: #60688C;
+    cursor: pointer;
+}
+
+.box_logo button:hover {
+    background-color: #0D0F23;
+}
+
+.span_version {
+    width: 54px;
+    padding: 5px;
+    border-radius: 12px;
+    background: #2ED9FF;
+    color: #05060B;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.box_list {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.box_list ul,
+.modal ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.box_list ul svg {
+    color: #60688C;
+}
+
+.box_list ul li p {
+    color: #B8BDD6;
+}
+
+.box_list ul li,
+.modal ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.box_list ul li:hover {
+    background-color: #0D0F23;
+    border-radius: 6px;
+}
+
+.box_list ul li:hover p,
+.box_list ul li:hover svg {
+    color: #D4D9EE;
+}
+
+.box_list_subtitle p {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #2D2F49;
+}
+
+.box_release {
+    max-width: 296px;
+    width: 100%;
+    height: 110px;
+    border-radius: 12px;
+    padding: 24px;
+    background: #05050B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_release p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #2D2F49;
+}
+
+.box_language {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.box_language button {
+    width: 52px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid #272B49;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.box_language_options {
+    max-width: 248px;
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    border: 1px solid #272B49;
+    padding: 0px 12px 0px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.box_language_options:hover,
+.box_language button:hover {
+    background-color: #0D0F23;
+}
+
+.active {
+    border-left: 5px solid #2ED9FF;
+}
+
+/*  closed and open modal  */
+.modal ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal ul p {
+    display: none;
+}
+
+.modal ul li p {
+    display: none;
+}
+
+.modal ul li:hover {
+    background-color: #0D0F23;
+    border-radius: 6px;
+}
+
+.release_closed {
+    display: none;
+}
+
+.language_closed button {
+    display: none;
+}
+
+.language_options_closed {
+    width: 51px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 12px;
+    border: 1px solid #272B49;
+    padding: 0px 12px 0px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.language_options_closed:hover {
+    background-color: #0D0F23;
+}
+
+
+.language_options_closed span {
+    display: none;
+}
+
+.box_logo_closed button {
+    display: none;
+}
+
+.button_open_list {
+    display: none;
+}
+
+.button_closed_list {
+    width: 52px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: transparent;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.button_closed_list:hover {
+    background-color: #272B49;
+}
+
+.yarg_icon_modal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2ED9FF;
+    margin-bottom: 1.5rem;
+}
+
+.borde_botton_closed {
+    margin-bottom: 1rem;
+}
+
+.borde_botton_closed span,
+.box_list_subtitle_closed span {
+    width: 2rem;
+    height: 1px;
+    background-color: #272B49;
+}
+
+.box_list_subtitle_closed {
+    margin-bottom: 1.5rem;
+}
