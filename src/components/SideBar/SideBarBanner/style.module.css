@@ -1,0 +1,17 @@
+.banner {
+  height: 110px;
+  border-radius: 12px;
+  background-color: #05050b;
+  color: #14172c;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+.banner img {
+  border-radius: 12px;
+}

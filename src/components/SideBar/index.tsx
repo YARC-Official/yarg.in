@@ -1,11 +1,8 @@
 'use client'
 
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useState } from "react";
+import React from "react";
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
-  ArrowRightFromLine,
   DiscAlbum,
   Flag,
   Gauge,
@@ -13,19 +10,22 @@ import {
   Guitar,
   Home,
   Library,
-  Moon,
   Settings,
-  Sun,
   User,
   Users
 } from "lucide-react";
-import { parseClassName } from "@/utils/helpers";
+
+import styles from "./style.module.css";
 import SideBarHeader from "./SideBarHeader";
-import styles from "./sidebar.module.css";
+import SideBarBanner from "./SideBarBanner";
+import SideBarThemeSelector from "./SideBarThemeSelector";
+import SideBarLanguage from "./SideBarLanguage";
+import SidebarNavigation from "./SidebarNavigation";
 
 const navigation = [
   {
-    links: [
+    separator: false,
+    items: [
       {
         href: "/home",
         name: "Home",
@@ -44,8 +44,9 @@ const navigation = [
     ]
   },
   {
-    separator: "Leaderboards",
-    links: [
+    header: "Leaderboards",
+    separator: true,
+    items: [
       {
         href: "/player",
         name: "Player",
@@ -80,7 +81,7 @@ const navigation = [
   },
   {
     separator: true,
-    links: [
+    items: [
       {
         href: "/settings",
         name: "Settings",
@@ -88,84 +89,51 @@ const navigation = [
       }
     ]
   }
-]
+];
 
 const languages = [
   { name: "English", acronym: "en"},
   { name: "Português", acronym: "pt"}
-]
+];
 
 const release = {
   image: "https://news.yarg.in/images/banners/v0-12-release.webp",
   target: "#!",
   text: "New release 0.12" 
-}
+};
 
 const version = "v0.12.0"
 
 const SideBar: React.FC = () => {
-  const router = useRouter();
-  const query = useSearchParams();
-  const isClose = query.has('closed')
-  const [theme, setTheme] = useState<'dark'|'light'>('dark')
-  const pathname = usePathname()
-
-  const handleTheme = () => setTheme((current) => current === 'dark' ? 'light': 'dark')
+  const { push } = useRouter();
+  const { has } = useSearchParams();
+  const isClose = has('closed');
+  const pathname = usePathname();
 
   const handleToggle = () => 
-    router.push(`${pathname}${!isClose ? "?closed" : "?"}`)
+    push(`${pathname}${isClose ? "?" : "?closed"}`);
   
   return (
     <div className={styles.sidebar} aria-expanded={!isClose}>
-      {!isClose ? <SideBarHeader.Open tag={version} onClose={handleToggle}/> : <SideBarHeader.Close />}
-      <div className={styles.navigation}>
-        {isClose && (
-          <button type="button" className={styles.link} onClick={handleToggle}>
-            <ArrowRightFromLine className={styles.icon} />
-          </button>
-        )}
-        {navigation?.map(({separator, links}) => (
-          <section key={crypto.randomUUID()} className={styles.section}>
-            {(separator && (isClose || typeof separator === 'boolean')) && <span className={styles.separator} />}
-            {!isClose && typeof separator === 'string' && <span className={styles.separatorNamed}>{separator}</span>}
-            {links.map(({href, icon: Icon, name}) => (
-              <div key={crypto.randomUUID()} className={parseClassName([styles.relative, pathname === href ? styles.active : ""])}>
-                <Link href={{pathname: href, query: isClose ? "closed" : undefined}}  className={styles.link}>
-                  <Icon className={styles.icon} absoluteStrokeWidth /> 
-                  <span className={styles.name}>{name}</span>
-                </Link>
-              </div>
-            ))}
-          </section>
-        ))}
-      </div>
-      {!isClose ? (
+      {isClose ? <SideBarHeader.Close /> : <SideBarHeader.Open tag={version} onClose={handleToggle}/>}
+      <SidebarNavigation navigation={navigation} isClose={isClose} onToggle={handleToggle} />
+      {isClose ? (
+        <div className={styles.controls}>
+          <SideBarLanguage.Button>EN</SideBarLanguage.Button>
+        </div>
+      ) : (
         <>
-          <div className={styles.release}>
-            {release && (
-              <Link href={release.target}>
-                <Image src={release.image} alt={release.text} width={296} height={110} />
-              </Link>
-            )}
-          </div>
+          <SideBarBanner release={release} />
           <div className={styles.controls}>
-            <select className={styles.select} title="Select language">
+            <SideBarLanguage.Select>
               {languages.map(({acronym, name}) => <option key={acronym}>{name}</option>)}
-            </select>
-            <button className={styles.buttonTheme} type="button" title="Button theme" onClick={handleTheme}>
-              {theme === 'dark'? <Moon />: <Sun />}
-            </button>
+            </SideBarLanguage.Select>
+            <SideBarThemeSelector />
           </div>
         </>
-      ) : (
-        <div className={styles.controls}>
-          <button className={styles.buttonLanguage} type="button" title="Button theme">
-            EN
-          </button>
-        </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default SideBar;

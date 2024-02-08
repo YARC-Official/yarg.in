@@ -10,11 +10,11 @@
   max-height: 75px;
 }
 
-.linkOpen {
+.itemOpen {
   height: 50px;
 }
 
-.linkClose {
+.itemClose {
   display: flex;
   align-items: center;
   justify-content: center;

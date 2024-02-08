@@ -1,0 +1,13 @@
+.selector {
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #1f223a;
+  border-radius: 12px;
+  height: 42px;
+  width: 42px;
+}
+
+.selector:hover {
+  background-color: #0d0d23;
+  color: #d4d9ee;
+}

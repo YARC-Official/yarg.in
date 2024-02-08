@@ -1,0 +1,51 @@
+.navigation {
+  padding-top: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  padding: 3px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  color: #60688C;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  margin: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.relative {
+  position: relative;
+}
+
+.button {
+  cursor: pointer;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin: 0px 12px;
+  padding: 10px;
+  color: #b8bdd6;
+  border-radius: 6px;
+  overflow-x: hidden;
+  background-color: transparent;
+  border: none;
+}
+
+.button:hover {
+  background-color: #0d0d23;
+  color: #d4d9ee;
+}
