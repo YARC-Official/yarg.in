@@ -15,7 +15,7 @@ type Props = {
 };
 
 const SideBarBanner: React.FC<Props> = ({ release }) => {
-  if (!release) return <></>;
+  if (!release) return null;
   return (
     <div className={styles.banner}>
       <Link href={release.target}>
