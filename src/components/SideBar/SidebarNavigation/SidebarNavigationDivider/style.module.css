@@ -1,0 +1,19 @@
+.separator {
+  margin: 12px 24px;
+  height: 1px;
+  background-color: #2d2f49;
+}
+
+.separatorNamed {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 24px;
+  margin-left: 12px;
+  height: 30px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d2f49;
+  text-transform: uppercase;
+}
