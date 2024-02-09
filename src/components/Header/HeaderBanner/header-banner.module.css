@@ -1,12 +1,15 @@
 .banner {
   height: 35px;
-  width: inherit;
+  width: 100%;
+  min-width: 680px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   cursor: pointer;
+
+  color: #FFFFFF;
 }
 
 .warning {

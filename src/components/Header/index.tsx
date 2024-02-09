@@ -40,7 +40,6 @@ const Header: React.FC = () => {
 
   // Temporary mocks
   const isLogged = true;
-  const mockedBannerMessage = "Lorem ipsum dolor sit amet.";
   const mockedTwitchBannerHref = "https://www.twitch.tv/eliteasian123";
   const mockedTwitchBannerMessage = "EliteAsian123 is LIVE on Twitch! Working on Engine rewrite";
 
@@ -49,20 +48,16 @@ const Header: React.FC = () => {
     console.log(searchValue);
   };
 
-  const handleBannerClick = () => {};
-
   return (
-    <>
-      {/* <HeaderBanner.Warning message={mockedBannerMessage} /> */}
-      {/* <HeaderBanner.Announcement message={mockedBannerMessage} onClick={handleBannerClick} /> */}
-      {/* <HeaderBanner.Live href={mockedTwitchBannerHref} message={mockedTwitchBannerMessage} /> */}
+    <header className={styles.header} >
+      <HeaderBanner type="live" message={mockedTwitchBannerMessage} href={mockedTwitchBannerHref} />
       
-      <header className={[styles.header, styles.bar].join(" ")}>
+      <div className={styles.bar}>
         <HeaderSearch value={searchValue} handleChange={setSearchValue} handleConfirm={handleSearchConfirm} />
         <Navigation />
         {isLogged ? <LoggedInComponents /> : null}
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 

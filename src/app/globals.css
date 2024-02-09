@@ -23,7 +23,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  padding-top: var(--headerHeight);
 }
 
 a {
