@@ -6,7 +6,6 @@ import TikTok from "./Tiktok.svg";
 import Twitch from "./Twitch.svg";
 import X from "./X.svg";
 import Youtube from "./Youtube.svg";
-import MagnifyingGlass from "./MagnifyingGlass.svg";
 
 export {
     Discord,
@@ -17,5 +16,4 @@ export {
     Twitch,
     X,
     Youtube,
-    MagnifyingGlass,
 };
