@@ -8,6 +8,7 @@ import HeaderBanner from "./HeaderBanner";
 import NavItem from "./HeaderNavItem";
 import HeaderSearch from "./HeaderSearch";
 import styles from "./header.module.css";
+import avatarMock from '@/assets/Images/Avatar.jpg';
 
 const navigation = [
   {
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
   const [searchValue, setSearchValue] = useState<string>("");
 
   // Temporary mocks
-  const isLogged = false;
+  const isLogged = true;
   const mockedBannerMessage = "Lorem ipsum dolor sit amet.";
   const mockedTwitchBannerHref = "https://www.twitch.tv/eliteasian123";
   const mockedTwitchBannerMessage = "EliteAsian123 is LIVE on Twitch! Working on Engine rewrite";
@@ -81,7 +82,7 @@ function LoggedInComponents() {
     <>
       <AccountNotification icon={Bell} notificationQuantity={11} />
       <AccountNotification icon={Users} notificationQuantity={25} />
-      <AccountMenu />
+      <AccountMenu username={"Kadoodle"} avatar={avatarMock} />
     </>
   );
 };
