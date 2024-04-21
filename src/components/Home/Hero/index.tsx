@@ -48,13 +48,17 @@ const HomeHero: React.FC = () => {
         <div className={styles.gem} data-color="blue"></div>
 
         <div className={styles.featureCard} data-position="left">
-          <div className={styles.featureTitle}>Song Formats</div>
-          <div className={styles.featureDescription}>.chart / .mid / CON files</div>
+          <div className={styles.featureTitle}>Lots of Formats</div>
+          <div className={styles.featureDescription}>
+            .chart / .mid / .sng / CON
+          </div>
         </div>
 
         <div className={styles.featureCard} data-position="top">
           <div className={styles.featureTitle}>Vocals</div>
-          <div className={styles.featureDescription}>Full solo and harmonies support, play with the full band experience</div>
+          <div className={styles.featureDescription}>
+            Full solo and harmonies support, play with the full band experience
+          </div>
         </div>
       </div>
     </div>
