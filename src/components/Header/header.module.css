@@ -1,29 +1,20 @@
 .header {
     width: 100%;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .bar {
     --_gap: 25px;
     display: flex;
-    padding: 0px var(--_gap);
-    gap: calc(var(--_gap) * 2);
+    padding: 0px 15px;
     width: 100%;
-    height: 75px;
+    height: var(--headerHeight);
     align-items: center;
 
     background: var(--headerBackground);
     color: #fff;
-}
-
-.bar[data-mode="transparent"] {
-    background: none;
-}
-
-.bar .logo {
-    height: 60%;
-    max-width: 100px;
-    width: 100%;
 }
 
 .bar ul {
@@ -31,38 +22,14 @@
     display: flex;
     gap: var(--_gap);
     margin-left: auto;
+    margin-right: 15px;
 }
 
 .bar li {
     list-style: none;
 }
 
-.bar .user {
-    font-weight: 600;
+.separator {
     display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.bar .button {
-    background: var(--blue);
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 50px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.bar .username::before {
-    content: "Hey, ";
-    font-weight: 400;
-}
-
-.bar .avatar {
-    border: 3px solid rgba(255, 255, 255, 0.05);
-    border-radius: 100%;
-    aspect-ratio: 1;
-    height: 32px;
+    gap: var(--_gap);
 }

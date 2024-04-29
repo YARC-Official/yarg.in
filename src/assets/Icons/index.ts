@@ -7,7 +7,6 @@ import Twitch from "./Twitch.svg";
 import X from "./X.svg";
 import Youtube from "./Youtube.svg";
 
-
 export {
     Discord,
     Github,

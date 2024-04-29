@@ -7,9 +7,8 @@ import { Discord } from "@/assets/Icons";
 import { Package } from "lucide-react";
 
 const HomeHero: React.FC = () => {
-
-  return <Header className={styles.hero} mode="transparent">
-    <div className={styles.content}>
+  return (
+    <div className={[styles.hero, styles.content].join(" ")}>
       <div className={styles.about}>
         <div className={styles.title}>
           <div className={styles.titleStatic}>Play on</div>
@@ -62,8 +61,7 @@ const HomeHero: React.FC = () => {
         </div>
       </div>
     </div>
-  </Header>;
-
+  );
 }
 
 export default HomeHero;

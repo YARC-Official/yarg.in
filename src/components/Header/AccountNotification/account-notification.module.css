@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 46px;
+  padding: 0 17px 0 10px;
+  margin-right: 10px;
+
+  font-size: 16px;
+  color: #717F9E;
+
+  border: 1px solid transparent;
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: #0e111b40;
+  border: 1px solid #0F121D;
+  
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+
+  margin: 9px;
+
+  color: #BAC0CD;
+}
