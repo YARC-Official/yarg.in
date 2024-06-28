@@ -1,0 +1,19 @@
+.sidebar {
+  background-color: #070810;
+  height: 100dvh;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 12px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.sidebar[aria-expanded="true"] {
+  width: 320px;  
+}
+
+.controls {
+  margin: 12px;
+  display: flex;
+  gap: 6px;
+}

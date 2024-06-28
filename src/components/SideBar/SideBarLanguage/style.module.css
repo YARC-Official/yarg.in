@@ -1,0 +1,31 @@
+.button {
+  flex: 1;
+  color: #8a91b2;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #1f223a;
+  border-radius: 12px;
+  height: 42px;
+}
+
+.button:hover {
+  background-color: #0d0d23;
+  color: #d4d9ee;
+}
+
+.select {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #1f223a;
+  border-radius: 12px;
+  height: 42px;
+  padding: 12px;
+  font-size: 14px;
+  color: #8a91b2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position:relative;
+  flex: 1;
+}
