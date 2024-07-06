@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  height: 46px;
+
+  padding: 8px;
+
+  background: none;
+
+  border: 1px solid #0F121D;
+  border-radius: 50px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.greeting {
+  font: 16px;
+  font-weight: 400;
+  color: #717F9E;
+}
+
+.greeting span {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+
+  color: #404867;
+}
+
+.avatar {
+  border-radius: 50px;
+}
