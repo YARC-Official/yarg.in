@@ -1,0 +1,57 @@
+.item {
+  cursor: pointer;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  margin: 0px 12px;
+  padding: 10px;
+  color: #b8bdd6;
+  border-radius: 6px;
+  overflow-x: hidden;
+  background-color: transparent;
+  border: none;
+}
+
+.item:hover {
+  background-color: #0d0d23;
+  color: #d4d9ee;
+}
+
+.active::before{
+  position: absolute;
+  content: "";
+  background-color: #2ed9ff;
+  width: 5px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.item:hover .icon {
+  color: #d4d9ee;
+}
+
+.icon {
+  padding: 3px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  color: #60688C;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.relative {
+  position: relative;
+}
+
+.center {
+  justify-content: center;
+}
