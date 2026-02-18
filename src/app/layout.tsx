@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Yet Another Rhythm Game',
     absolute: defaultTitle
   },
-  
+
   description: description,
   keywords: ["YARG", "Yet Another Rhythm Game", "Rock Band", "Guitar Hero", "Clone Hero"],
   creator: twitterAccount,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: defaultTitle, 
+    title: defaultTitle,
     description: description,
     site: "https://yarg.in",
     creator: twitterAccount,
