@@ -46,8 +46,8 @@ const HomeHero: React.FC = () => {
 
         <div className={styles.video}>
           <iframe
-            src={"https://www.youtube.com/embed/yVwCOa6ysEY"}
-            title="YARG Setlist: Davvn, obkatiekat, and more"
+            src={"https://www.youtube.com/embed/gM9gPYNzHWg"}
+            title="YARG Setlist: Red Vox, Saturdays at Your Place, and more"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
