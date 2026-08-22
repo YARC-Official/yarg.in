@@ -1,0 +1,25 @@
+h1 {
+	font-size: var(--text-5xl);
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+}
+
+h2 {
+	font-size: var(--text-3xl);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+p {
+	font-size: var(--text-xl);
+	padding-bottom: 1rem;
+}
+
+ul {
+	padding-bottom: 1rem;
+}
+
+/* Broken on header and footer */
+/* a {
+	color: #45D8FE;
+} */

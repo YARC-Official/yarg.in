@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+@import '@splidejs/svelte-splide/css';
+
+@theme {
+	--color-vivid-sky: #45D8FE;
+	--color-imperial: #F32B37;
+	--color-yarg-emerald: #2BE18D;
+	--color-mustard: #FCD548;
+	--color-night: #090A0B;
+	--color-rich-black: #0C0F1E;
+	--color-oxford: #151A30;
+	--color-space-cadet: #1E253E;
+	--color-space-cadet-light: #2F344D;
+	--color-cool-gray: #7B7F9A;
+}
+
+body {
+	margin: 0;
+}
+
+p, span, div {
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Big Shoulders', sans-serif;
+	font-weight: 700;
+}
+
+ul {
+	padding-left: 1.5rem;
+	list-style-type: disc;
+}
