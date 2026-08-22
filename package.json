@@ -1,31 +1,32 @@
 {
-  "name": "yarg.in",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "gray-matter": "^4.0.3",
-    "lodash": "^4.17.21",
-    "lucide-react": "^0.314.0",
-    "markdown-to-txt": "^2.0.1",
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-markdown": "^9.0.1",
-    "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "typescript": "^5"
-  }
+	"name": "yarg-website-new",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^7.0.0",
+		"@sveltejs/kit": "^2.50.2",
+		"@sveltejs/vite-plugin-svelte": "^6.2.4",
+		"@tailwindcss/vite": "^4.1.18",
+		"svelte": "^5.51.0",
+		"tailwindcss": "^4.1.18",
+		"vite": "^7.3.1",
+		"vite-plugin-devtools-json": "^1.0.0"
+	},
+	"dependencies": {
+		"@humanspeak/svelte-markdown": "^1.8.5",
+		"@lucide/svelte": "^1.27.0",
+		"@splidejs/svelte-splide": "^0.2.9",
+		"bits-ui": "^2.18.1",
+		"date-fns": "^4.4.0",
+		"gray-matter-es": "^0.2.1",
+		"humanize-duration": "^3.34.0",
+		"svelte-fast-marquee": "^1.3.0"
+	}
 }
