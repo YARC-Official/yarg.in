@@ -40,7 +40,7 @@
 		<a href="https://discord.gg/yarg"><img src="/svgs/discord.svg" class="h-8 text-white" alt="Discord Logo" /></a>
 		<a href="https://youtube.com/@yarggame"><img src="/svgs/youtube.svg" class="h-8 text-white" alt="YouTube Logo" /></a>
 		<a href="https://x.com/YARGGame"><img src="/svgs/twitter.svg" class="h-8 text-white" alt="Twitter Logo" /></a>
-		<a href="https://bsky.app/yarg.in"><img src="/svgs/bluesky.svg" class="h-8 text-white" alt="Bluesky Logo" /></a>
+		<a href="https://bsky.app/profile/yarg.in"><img src="/svgs/bluesky.svg" class="h-8 text-white" alt="Bluesky Logo" /></a>
 		<a href="https://instagram.com/yarg.game"><img src="/svgs/instagram.svg" class="h-8 text-white" alt="Instagram Logo" /></a>
 		<a href="https://twitch.tv/yarggame"><img src="/svgs/twitch.svg" class="h-8 text-white" alt="Twitch Logo" /></a>
 		<a href="https://tiktok.com/@yarggame"><img src="/svgs/tiktok.svg" class="h-8 text-white" alt="TikTok Logo" /></a>
