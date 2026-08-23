@@ -6,7 +6,7 @@
 	const ARTISTS = [
 		"Alohaii",
 		"Atomic Guava",
-		"Bit Breaker",
+		"Bitbreaker",
 		"Blight Town",
 		"Bob Kulick and David Glen Eisley",
 		"Boom Kitty",

@@ -28,8 +28,8 @@
 			gameVersion: portables.tag_name,
 			launcherDownloads: {
 				windows: releases.assets[5].browser_download_url,
-				mac: releases.assets[1].browser_download_url,
-				linux: releases.assets[9].browser_download_url
+				mac: releases.assets[9].browser_download_url,
+				linux: releases.assets[1].browser_download_url
 			},
 			portableDownloads: {
 				win: portables.assets[4].browser_download_url,

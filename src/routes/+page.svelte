@@ -41,7 +41,7 @@
 		<p class="max-w-3xl text-xl">
 			YARG supports local multiplayer with up to 32 players, so the whole friend group can play at the same time!
 			<br /><br />
-			Online multiplayer, as well as other online features like competative leaderboards will be coming in future updates. Peek into our Discord server for the latest news!
+			Online multiplayer, as well as other online features like competitive leaderboards will be coming in future updates. Peek into our Discord server for the latest news!
 		</p>
 	</div>
 </div>
