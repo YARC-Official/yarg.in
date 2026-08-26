@@ -7,4 +7,5 @@
 	<li><a href="/legal/copyright" class="text-vividskyblue underline">YARG copyright policy</a></li>
 	<li><a href="/legal/licensing" class="text-vividskyblue underline">YARG music licensing policy</a></li>
 	<li><a href="/legal/terms" class="text-vividskyblue underline">YARG terms of service</a></li>
+	<li><a href="/legal/privacy" class="text-vividskyblue underline">YARG privacy policy</a></li>
 </ul>
