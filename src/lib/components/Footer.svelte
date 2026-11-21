@@ -11,7 +11,7 @@
 <div class="p-16 bg-rich-black text-cool-gray border-t border-space-cadet-light flex flex-col gap-16">
 	<div class="flex flex-col md:flex-row gap-8 justify-between">
 		<div class="flex flex-col gap-4">
-			<img src="yarc-logo.png" class="w-32" alt="YARG Logo" />
+			<img src="/yarc-logo.webp" class="w-32" alt="YARC Logo" />
 				<p class="text-xl">Made with lots of ❤️ by {contributors.length} contributors</p>
 		</div>
 

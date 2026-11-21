@@ -22,6 +22,6 @@
 	</div>
 
 		<div class="relative m-auto h-screen z-1 max-w-4xl p-32 flex items-center justify-center">
-			<img src="yarg-logo.png" class="drop-shadow-2xl drop-shadow-black" alt="YARG Logo" />
+			<img src="/yarg-logo.webp" class="drop-shadow-2xl drop-shadow-black" alt="YARG Logo" />
 		</div>
 </div>
