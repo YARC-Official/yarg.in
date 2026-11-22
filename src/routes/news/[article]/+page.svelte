@@ -7,6 +7,14 @@
 	let banner = $state("");
 	let avatar = $state("")
 	let videoId = $derived(header.video?.split('.be/')[1]?.split('&')[0] || null);
+	let ogDescription = $derived(
+		data.data.content
+			.split(/\r?\n/)
+			.map((line: string) => line.trim())
+			.filter((line: string) => line && !line.startsWith('#'))
+			.join(' ')
+			.slice(0, 80)
+	);
 
 	onMount(async () => {
 		const response = await fetch(`https://raw.githubusercontent.com/YARC-Official/News/master/images/banners/${header.banner}`);
@@ -18,6 +26,22 @@
 		avatar = URL.createObjectURL(avatarBlob);
 	});
 </script>
+
+<svelte:head>
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://yarg.in/" />
+	<meta property="og:title" content="{header.title}" />
+	<meta property="og:description" content="{ogDescription}..." />
+	<meta property="og:image" content="{banner}" />
+
+	<!-- X (Twitter) -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://yarg.in/" />
+	<meta property="twitter:title" content="{header.title}" />
+	<meta property="twitter:description" content="{ogDescription}..." />
+	<meta property="twitter:image" content="{banner}" />
+</svelte:head>
 
 <img src="{banner}" class="mask-b-from-20% mask-b-to-80%" alt="{header.title}" />
 <a href='/news' class="flex items-center text-xl text-white/50 hover:text-white transition"><ChevronLeft class="inline-block mr-2" />Back to News</a>
